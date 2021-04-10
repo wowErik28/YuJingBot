@@ -1,0 +1,6 @@
+response为字典
+{'msg':回复的数据,
+'emotion':回复的是'POSITIVE','NEGTIVE',
+'time':根据当前时间给出值}
+
+V3：加入time和音频

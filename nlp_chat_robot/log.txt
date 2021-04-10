@@ -1,0 +1,32 @@
+一、安装环境注意的地方
+tensorflow-gpu==2.3.0
+transformers==4.3.3
+rasa-nlu==0.15.1
+sklearn_crfsuite
+spacy==3.0.3
+en_core_web_md(在Erik/下载  or models/model_file里)
+torch(在Erik/下载)
+============================== Info about spaCy ==============================
+
+spaCy version    3.0.3
+Location         D:\Anaconda3\lib\site-packages\spacy
+Platform         Windows-10-10.0.19041-SP0
+Python version   3.7.4
+Pipelines        en_core_web_md (3.0.0), zh_core_web_md (3.0.0)
+
+！！！补充：
+1.训练rasa_nlu 模型过程
+(1)config_spacy.yml, demo-rasa.json文件准备
+(2)输入命令：
+训练rasa_nlu模型均通过命令行（先进入到有config,data的目录）
+python -m rasa_nlu.train -c config_spacy.yml --data demo-rasa.json --path .  --project bot
+模型目录即为 path+project+model20200310-199119041
+
+!!!!!!!!!!
+2.poem 模型的目录是绝对路径
+en_core_web_md
+二、超参数定义
+'en' 代表英语模式，在res_dict, intent 中均使用此
+'poem' 代表古诗模式，在res_dict, intent 中均使用此
+
+model_list 必须设置name属性 且name为'en' or 'poem'
