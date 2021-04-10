@@ -1,0 +1,6 @@
+Django==3.2
+rasa-nlu==0.15.1
+spacy==3.0.3
+tensorflow-gpu==2.3.0
+transformers==4.3.3
+
